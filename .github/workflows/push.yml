@@ -1,6 +1,13 @@
-name: Generate release APK and AAB
+name: Push
+
 on:
-  pull_request:
-    branches: [ master ]
   push:
-    branches: [ master ]
+    branches: [ "develop", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
