@@ -1,0 +1,6 @@
+name: Generate release APK and AAB
+on:
+  pull_request:
+    branches: [ master ]
+  push:
+    branches: [ master ]
